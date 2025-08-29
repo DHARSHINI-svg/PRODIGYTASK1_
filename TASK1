@@ -1,0 +1,129 @@
+<--HTML-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="1task.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar">
+      <div class="logo">MyBrand</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+      <h1>Welcome to My Landing Page</h1>
+      <p>Scroll down to see the effect</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        This is a simple responsive landing page with interactive navigation.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>We provide amazing services for our clients.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us here.</p>
+    </section>
+
+    <script src="1task.js"></script>
+  </body>
+</html>
+
+<--CSS-->
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}// Change navbar style on scroll
+window.addEventListener("scroll", function () {
+  const navbar = document.getElementById("navbar");
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+
+/* Sections */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+#home {
+  background: #4facfe;
+}
+#about {
+  background: #43e97b;
+}
+#services {
+  background: #fa709a;
+}
+#contact {
+  background: #fbc531;
+}
+<--JAVASCRIPT-->
+
